@@ -3,7 +3,9 @@ package com.fahami.cda.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library {
+import com.fahami.cda.entity.interfaces.iCopy;
+
+public class Library implements iCopy {
     // Les propriétés
     private String name;
     private List<Copy> copies = new ArrayList<>();

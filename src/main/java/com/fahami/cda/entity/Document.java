@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fahami.cda.entity.enumeration.TypeDocument;
+import com.fahami.cda.entity.interfaces.iCopy;
+
 import java.util.Objects;
 
-public abstract class Document implements Comparable<Document>{
+public abstract class Document implements Comparable<Document>, iCopy{
     // Les propriétés
     private int id;
     private String title;
@@ -105,11 +107,5 @@ public abstract class Document implements Comparable<Document>{
         result = 31 * result + Objects.hashCode(createdAt);
         result = 31 * result + Objects.hashCode(updatedAt);
         return result;
-    }
-
-    public void addCopy(Copy copy){
-        if(!copies.contains(copy)){
-            copies.add(copy);
-        }
     }
 }
