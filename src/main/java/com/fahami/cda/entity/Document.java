@@ -82,6 +82,7 @@ public abstract class Document implements Comparable<Document>, iCopy{
 
     public abstract String toString();
 
+    /** */
     @Override
     public int compareTo(Document other){
         if(this.getPublishYear() == null && other.getPublishYear() == null) return 0;
