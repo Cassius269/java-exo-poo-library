@@ -1,8 +1,12 @@
 package com.fahami.cda.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Library {
-    // La propriété 
+    // Les propriétés
     private String name;
+    private List<Copy> copies = new ArrayList<>();
 
     // Le constructeur
     public Library(){};
@@ -14,5 +18,13 @@ public class Library {
 
     public void setName(String name) {
         this.name = name;
-    }   
+    }  
+    
+    public List<Copy> getCopies() {
+        return this.copies;
+    }
+
+    public void setCopies(List<Copy> copies) {
+        this.copies = copies;
+    }
 }

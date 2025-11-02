@@ -1,6 +1,8 @@
 package com.fahami.cda.entity;
 
-public class Magazine extends Document {
+import com.fahami.cda.entity.interfaces.iDocument;
+
+public class Magazine extends Document implements iDocument{
     private int editionNumber;
 
     public int getEditionNumber() {
@@ -9,5 +11,25 @@ public class Magazine extends Document {
 
     public void setEditionNumber(int editionNumber) {
         this.editionNumber = editionNumber;
+    }
+
+    
+     @Override
+    public String displayDetails(){
+        return toString();
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", title='" + getTitle() + "'" +
+            ", editionNumber='" + getEditionNumber() + "'" +
+            ", publishYear='" + getPublishYear() + "'" +
+            ", typeDocument='" + getTypeDocument() + "'" +
+            ", createdAt='" + getCreatedAt() + "'" +
+            ", updatedAt='" + getUpdatedAt() + "'" +
+            ", copies='" + getCopies() + "'" +
+            "}";
     }
 }
